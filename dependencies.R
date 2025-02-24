@@ -1,4 +1,4 @@
-# Packages for loading into workspace
+# Packages for loading into workspace (contains common packages I use)
 
 logger::log_info("Loading dependencies")
 
@@ -40,7 +40,6 @@ load_packages <- c(
   'factoextra', # Clustering visualisation
   'fpc', # Clustering boostrapping
   'kableExtra', # Change tables to html
-  'treemap', # Change tables to html
   'pivottabler',
   'treemapify',
   'vtree', # to create qa_trees
