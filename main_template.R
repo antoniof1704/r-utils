@@ -1,0 +1,24 @@
+#' Template for Main Script to Initialise Dependencies and Load Other In-Built R 
+#' Functions in 'src'
+
+#' Author: Antonio Fratamico
+
+#Initialize working directory --------------------------------------------------
+setwd("~/r-utils")
+
+# Install logger and config ----------------------------------------------------
+#install.packages("logger")
+library("logger")
+#install.packages("config")  
+library("config")
+
+# Get todays date and convert to preferred format for file names ---------------
+run_date <- format(Sys.Date(), "%y%m%d")
+
+# Install dependencies ---------------------------------------------------------
+source('~/r-utils/dependencies.R')
+install_dependencies()
+
+# Source functions -------------------------------------------------------------
+sourceable<- list.files("src", full.names = TRUE, recursive = TRUE)
+purrr::walk(sourceable, source)
