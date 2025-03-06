@@ -22,3 +22,11 @@ install_dependencies()
 # Source functions -------------------------------------------------------------
 sourceable<- list.files("src", full.names = TRUE, recursive = TRUE)
 purrr::walk(sourceable, source)
+
+# Save logs (Uncomment) --------------------------------------------------------
+# logger::log_appender(logger::appender_tee(log_file(run_date, "config.yml"), append = TRUE))
+
+
+Stop saving logs (Uncomment) ---------------------------------------------------
+# logger::log_appender(appender_stdout)
+
