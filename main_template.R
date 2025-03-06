@@ -27,6 +27,6 @@ purrr::walk(sourceable, source)
 # logger::log_appender(logger::appender_tee(log_file(run_date, "config.yml"), append = TRUE))
 
 
-Stop saving logs (Uncomment) ---------------------------------------------------
+# Stop saving logs (Uncomment) -------------------------------------------------
 # logger::log_appender(appender_stdout)
 
