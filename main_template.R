@@ -24,7 +24,8 @@ sourceable<- list.files("src", full.names = TRUE, recursive = TRUE)
 purrr::walk(sourceable, source)
 
 # Save logs (Uncomment) --------------------------------------------------------
-# logger::log_appender(logger::appender_tee(log_file(run_date, "config.yml"), append = TRUE))
+# log_file <- file.path(config::get("log_path", file= config.yml), paste0(date, "_Log_Outputs.txt"))
+# logger::log_appender(logger::appender_tee(log_file, append = TRUE))
 
 
 # Stop saving logs (Uncomment) -------------------------------------------------
