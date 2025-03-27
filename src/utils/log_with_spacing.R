@@ -3,10 +3,12 @@
 #' 
 #' Author: Antonio Fratamico
 
+library(glue)
+
 log_with_spacing <- function(log_desc){
   
   logger::log_info("-----------------------------------------------------")
-  logger::log_info(log_desc)
+  logger::log_info(glue(log_desc))
   logger::log_info("-----------------------------------------------------")
   
 }
