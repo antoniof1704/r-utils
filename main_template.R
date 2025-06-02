@@ -15,6 +15,9 @@ library("config")
 # Get todays date and convert to preferred format for file names ---------------
 run_date <- format(Sys.Date(), "%y%m%d")
 
+# Get analyst user ID to add to file names -------------------------------------
+your_id <- Sys.info()["user"]
+
 # Install dependencies ---------------------------------------------------------
 source('~/r-utils/dependencies.R')
 install_dependencies()
