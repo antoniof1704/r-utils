@@ -1,0 +1,150 @@
+---
+title: "ADD TITLE"
+output: 
+      html_document:
+        toc: true
+        toc_float: true
+        toc_depth: 3
+        toc_collapased: false
+        number_sections: true
+author: <span style="color:#007868; font-size:160%;">**TEAM NAME**</span>
+date: "`r format(Sys.time(), '%d %B %Y')`"
+# runtime: rshiny
+---
+
+<!-- Logo -->
+
+<div class="logo-container">
+  <img src="LOCATION OF LOGO .png" alt="Company Logo" height="100" class="logo">
+</div>
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning = FALSE, message = FALSE) 
+```
+
+
+# FIRST SECTION
+
+**Settled Individuals with IHT Liabilities**
+
+```{r ind-settle-iht-liab, echo= FALSE}
+
+# Step 1: Get and process data
+table1 <- table0
+
+# Step 2: Create df for Markdown
+
+table_df <- data.frame(
+  " " = c("Unrounded", "Rounded"),
+  "No. of Rows" = c(
+    comma(nrow(table1)),
+    comma(round(nrow(table1), -2))
+    ),
+  check.names = FALSE
+)
+
+# Step 3: Render table in Markdown
+
+knitr::kable(table_df, align = "l") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                full_width = FALSE,
+                position = "left") %>%
+  row_spec(0, background = "#009390", color = "white") %>%
+  column_spec(1, background = "#009390", color = "white")
+
+```
+
+
+```{css, echo=FALSE}
+.title {
+  color: rgb(112, 111, 111) !important;
+  font-size: 48px !important;
+  margin-top: 175px !important;
+}
+
+.logo-container {
+  position: absolute;
+  top: 50px;
+  left: 30px;
+}
+
+.title {
+  display: inline-block;
+}
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus{background-color: #008776}
+.tocify{margin-top: 105px !important}
+.tocify{max-height: 70% !important}
+
+h1 {color: #01806f; margin-top: 30px !important}
+h2 {color: #01806f !important}
+h3 {color: #737373 !important}
+
+thead {
+  background-color: #008776;
+  color: white;
+  text-align: center;}
+
+tbody tr:nth-child(odd) {
+background: #f2fafa;}
+
+tbody tr:hover {background: #7FC3BA;}
+
+
+/* make background colour white */
+body {background-color: white;}
+
+
+/* define highlight section */
+div.highlight {
+	background-color:#f2fafa;
+	border-radius: 5px;
+	padding: 5px;}
+
+.watermark {
+  opacity: 0.05;
+  position: fixed;
+  font-size: 500%;
+  color: #00407d;
+  transform: rotate(-45deg);
+}
+
+/* define team banner at top of markdown document */
+.teamheader {
+  position: absolute;
+  top: 0%;
+  left: 3%;
+  font-size: 100%;
+  color: white;
+  background-color: black; border-radius: 0px; padding: 5px;
+  width: 92%;
+  height: 25px;
+  line-height: 17px;
+  text-align: right;
+}
+
+/* define caption formatting */
+p.caption {
+  font-size: 1em;
+  font-style: italic;
+  color: grey;
+  margin-right: 10%;
+  margin-left: 10%;  
+  text-align: justify;
+}
+
+/* justify body text */
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.boxed {
+  background: #f5f5f5;
+    margin: 0px auto;
+  padding: 10px;
+}
+
+```
