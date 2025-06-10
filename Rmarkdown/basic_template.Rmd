@@ -25,11 +25,11 @@ knitr::opts_chunk$set(echo = TRUE,warning = FALSE, message = FALSE)
 ```
 
 
-# FIRST SECTION
+# FIRST SECTION NAME
 
-**Settled Individuals with IHT Liabilities**
+**SUB SECTION NAME**
 
-```{r ind-settle-iht-liab, echo= FALSE}
+```{r sub-section, echo= FALSE}
 
 # Step 1: Get and process data
 table1 <- table0
