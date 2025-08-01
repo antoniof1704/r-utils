@@ -4,7 +4,8 @@
 #' Author: Antonio Fratamico
 
 #Initialize working directory --------------------------------------------------
-setwd("~/r-utils")
+your_wd <- "~/r-utils"
+setwd(your_wd)
 
 # Install logger and config ----------------------------------------------------
 #install.packages("logger")
